@@ -16,7 +16,7 @@ const IdeaCard = ({
   });
   return (
     <div
-      key={idea.id}
+      key={idea._id}
       className="border border-gray-300 p-4 rounded shadow bg-white flex flex-col justify-between"
     >
       <div>
@@ -26,7 +26,7 @@ const IdeaCard = ({
 
       <Link
         to="/ideas/$ideaId"
-        params={{ ideaId: idea.id.toString() }}
+        params={{ ideaId: idea._id.toString() }}
         className={linkClasses}
       >
         {button ? "View Idea" : "Read more →"}
